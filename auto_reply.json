@@ -1,0 +1,18 @@
+{
+  "name": "health-system-auto",
+  "description": "健康管理系统 - 自动处理飞书图片和消息",
+  "version": "1.0.0",
+  "enabled": true,
+  "triggers": {
+    "message": {
+      "channels": ["feishu"],
+      "groups": ["oc_f850bac5800af8bb3ed23de7df75edd0"],
+      "patterns": [".*"],
+      "hasImage": true
+    }
+  },
+  "handler": {
+    "type": "script",
+    "script": "health_auto_reply.py"
+  }
+}
